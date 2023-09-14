@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('https://img.freepik.com/free-vector/floating-laughing-emoji-characters_52683-27761.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        h1 {
+            font-size: 5rem;
+            color: #DBEDF3;
+            font-family: "Arvo", cursive;
+            text-shadow: 3px 0 #614004;
+        }
+        footer {
+            color: #DBEDF3;
+            font-family: sans-serif;
+        }
+
+        button{
+          font-family: "Arvo", cursive;
+          font-size: 2rem;
+          text-shadow: 3px #614004; 
+          text-shadow: #614004;
+          text-align: justify;
+          border-radius: 20px;
+          
+        }
+        .cat {
+            background-image: url("images/elritas.jpg");
+            height: 300px;
+            width: 300px;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .puppy {
+            background-image: url("/images/emotional.jpg");
+            height: 300px;
+            width: 300px;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .bee {
+            background-image: url("/images/mannyp.jpg");
+            height: 300px;
+            width: 300px;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .monkey {
+            background-image: url("/images/walanafinishna.jpg");
+            height: 300px;
+            width: 300px;
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .dog {
+            background-image: url("/images/josemarichan.jpg");
+            height: 300px;
+            width: 300px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bird {
+            background-image: url("/images/happybday.jpg");
+            height: 300px;
+            width: 300px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h3{
+          color: aliceblue;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Sounds</title>
+</head>
+<body>
+    
+    <h1 id="title">Just for Fun</h1>
+    <h3>Click to sound:</h3>
+    <div class="set">
+        <button class="cat animal">Elritas</button>
+        <button class="puppy animal">Steven He</button>
+        <button class="bee animal">Manny Pacquiao</button>
+        <button class="monkey animal">Wala na Finish na</button>
+        <button class="dog animal">Jose Mari Chan</button>
+        <button class="bird animal">Caloy</button>
+
+
+    </div>
+
+    <script>
+        var numberOfAnimationsButtons = document.querySelectorAll('.animal').length;
+
+        for (var i = 0; i < numberOfAnimationsButtons; i++) {
+            document.querySelectorAll('.animal')[i].addEventListener('click', function () {
+                var buttons = this.innerText;
+                switch (buttons) {
+                    case "Elritas":
+                        var cat = new Audio("/sounds/FUNNY LAUGH SOUND EFFECT (EL RISITAS MEME).mp3");
+                        cat.play();
+                        break;
+
+                    case "Steven He":
+                        var puppy = new Audio("/sounds/Emotional Damage Meme - Sound Effect (HD).mp3");
+                        puppy.play();
+                        break;
+                    
+                    case "Jose Mari Chan":
+                        var monkey = new Audio("/sounds/Jose Mari Chan - Christmas In Our Hearts.mp3");
+                        monkey.play();
+                        break;
+
+                    case "Manny Pacquiao":
+                        var bee = new Audio("/sounds/Manny Pacquiao _Happy New Year Everyone_! Filipino Meme Sound Effects.mp3");
+                        bee.play();
+                        break;
+
+                    case "Wala na Finish na":
+                        var monkey = new Audio("/sounds/107  Wala Na Finish Na   Free Meme Video With Sound Effect For Vlog  No Copyright Meme Video.mp3");
+                        monkey.play();
+                        break;
+
+                    case "Caloy":
+                        var monkey = new Audio("/sounds/i would like to greet to the happy birthday.mp3");
+                        monkey.play();
+                        break;
+
+                    default:
+                        break;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
